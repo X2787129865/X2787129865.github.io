@@ -1,0 +1,152 @@
+<!doctype html>
+<html>
+	<head>
+		<title>html5新标签</title>
+		<style type="text/css">
+		*{margin:0;padding:0;}
+		header>ul{
+		width:1000px;height:50px;
+		margin:0 auto;
+		border-bottom:5px solid gray;
+		position:relative;
+		}
+		header>ul>li{
+			list-style-type:none;
+			width:150px;height:50px;
+           /*  border:1px solid black;  li标签不能添加边框*/
+			float:left;
+		}
+
+		header>ul>li>label{
+			display:block;width:150px;height:50px;
+			text-align:center;line-height:50px;
+			font-family:"微软雅黑";
+			transition:font-size  0.3s;
+		}
+		input[type="radio"]{display:none;}
+
+		header>ul>li>div{
+		width:1000px;max-height:0;overflow:hidden;
+		position:absolute;top:55px;left:0;
+		transition:all 0.3s;
+		}
+
+		ol{
+		width:950px;/*  ol标签不要设置height */
+		margin-left:50px;/* 让ol标签往右移动50px */
+		}
+		ol>li{
+		list-style-type:none;
+		width:950px;/* li标签不能设置height */
+		position:relative;
+		}
+
+		ol>li>label{
+		border:1px solid black;
+		display:block;width:950px;height:60px;
+		box-sizing:border-box;padding-left:60px;
+		background-image:url("./sucai/p6.jpg");
+		background-size:50px;
+		background-repeat:no-repeat;
+		background-position:5px 5px;
+		font-family:"微软雅黑";font-size:1.5em;
+		line-height:60px;
+		}
+		ol>li>span{
+		display:block;width:200px;height:60px;
+		position:absolute;right:0;top:0;
+		font-size:1.2em;font-family:"微软雅黑";
+		line-height:60px;text-align:right;
+		pointer-events:none;/*  不响应鼠标点击 */
+		}
+		input[type="checkbox"]{display:none;}
+
+		section{
+			width:950px;height:300px;
+			background-color:red;
+		}
+	/* 鼠标悬停和点击的效果代码  */
+		header>ul>li:hover   >label{
+		border-bottom:5px solid blue;
+		font-size:1.2em;
+		}
+
+		header>ul>li>input[type="radio"]:checked  +label{
+		border-bottom:5px solid blue;
+		font-size:1.2em;
+		}
+
+		header>ul>li>input[type="radio"]:checked ~div{
+		max-height:2000px;
+		}
+
+		ol>li>input[type="checkbox"]:checked +label{background-image:url("./sucai/p4.jpg");}
+
+
+		section{width:100%;max-height:0px;overflow:hidden;background-color:red;}
+
+		ol>li>input[type="checkbox"]:checked~section{max-height:400px;display:block}
+
+		
+
+		</style>
+		
+	</head>
+	<body>
+			<header>
+				<ul>  <!--一级水平导航条代码开始-->
+					<li>
+						<input type="radio" name="dh" id="radio1" checked/>
+						<label for="radio1">课程介绍</label>
+						<div>
+							<ol> <!--二级菜单代码开始-->
+								<li>
+									<input type="checkbox" id="checkbox1"/>
+									<label for="checkbox1">第一章</label>
+									<span>共13节内容</span>
+									<section>1号</section>
+								</li>
+
+								<li>
+									<input type="checkbox" id="checkbox2"/>
+									<label for="checkbox2">第二章</label>
+									<span>共10节内容</span>
+									<section>1号</section>
+								</li>
+
+								<li>
+									<input type="checkbox" id="checkbox3"/>
+									<label for="checkbox3">第三章</label>
+									<span>共11节内容</span>
+									<section>1号</section>
+								</li>
+							</ol><!--二级菜单代码结束-->
+						</div>
+					</li>
+
+
+					<li>
+						<input type="radio" name="dh" id="radio2"/>
+						<label for="radio2">课程大纲</label>
+						<div></div>
+					</li>
+
+					<li>
+						<input type="radio" name="dh" id="radio3"/>
+						<label for="radio3">课程资料</label>
+						<div></div>
+					</li>
+
+					<li>
+						<input type="radio" name="dh" id="radio4"/>
+						<label for="radio4">课程评价</label>
+						<div></div>
+					</li>
+				</ul><!--一级水平导航条代码结束-->
+			
+			
+			
+			</header>
+			
+	</body>
+</html>
